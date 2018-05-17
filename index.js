@@ -10,6 +10,7 @@ const renderTeamItem = function(team) {
     delBut.addEventListener('click', deleteFunc)
     item.appendChild(delBut)
     delBut.textContent = 'Delete'
+    delBut.style.marginLeft = '12px'
 
     return item
  }
