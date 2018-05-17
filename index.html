@@ -6,7 +6,7 @@
     <title>Baseball Teams</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
+    
 </head>
 <body style="background-color: whitesmoke">
     <center>
@@ -18,24 +18,32 @@
     <p>
         <img src="http://www.lflegal.com/wp-content/uploads/2013/12/mlb_logo.jpg" height="60px" width="90px">
     </p>
+    
 
     <form id="teamForm">
         <p>
             <label for="favTeam">Enter your favorite baseball team:</label>
-            <input type="text" name="userName" autofocus>
+            <input type="text" name="favTeam" autofocus>
         </p>
 
             <button id="submitButton" type="submit">Submit</button>
-        
+
     </form>
+
+
+    <p>
+    <div id="teams"></div>
+    </p>
 
     </center>
 
     <footer class="footer">
             <p>
-                <img src="https://www.bglawnservice.com/wp-content/uploads/2018/02/under-footer.png">
+                <img id="grassImg" src="https://www.bglawnservice.com/wp-content/uploads/2018/02/under-footer.png">
             </p>
     </footer>
 
+
+    <script src="index.js"></script>
 </body>
 </html>
