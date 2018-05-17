@@ -2,15 +2,22 @@ const form= document.querySelector('form#teamForm')
 const teamsArray = []
 
 const renderTeamItem = function(team) {
-    const item = document.createElement('li');
-    item.textContent = `Team: ${team}`;
-    return item;
+    const item = document.createElement('li')
+    item.textContent = `Team: ${team}`
+    item.style.textAlign='center'
+
+    const delBut = document.createElement('button')
+    item.appendChild(delBut)
+    delBut.textContent = 'Delete'
+
+    return item
  }
 
  const renderTeam = function(teamName) {
-    const list = document.createElement('ul');
-    list.appendChild(renderTeamItem(teamName));
-    return list;
+    const list = document.createElement('ul')
+    list.appendChild(renderTeamItem(teamName))
+
+    return list
 }
 
 // function teamsItem(team){
@@ -27,6 +34,7 @@ const renderTeamItem = function(team) {
 
 //     return div
 // }
+
 
 const handleSubmit = function(ev){
     ev.preventDefault()

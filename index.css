@@ -16,6 +16,10 @@ header{
     background-color: #1A06A3;
 }
 
+.teams{
+    text-align: left;
+}
+
 li{
     list-style: none;
 }
