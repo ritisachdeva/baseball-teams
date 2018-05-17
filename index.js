@@ -23,10 +23,9 @@ const renderTeamItem = function(team) {
 
 const deleteFunc = function(ev) {
     ev.preventDefault()
-    const listItem = ev.target
-    listItem.parentNode.remove()
-    arr.splice(arr.indexOf(listItem), 1)
-
+    const teamItem = ev.target
+    teamItem.parentNode.remove()
+    teamsArray.splice(teamsArray.indexOf(teamItem), 1)
 }
 
 
