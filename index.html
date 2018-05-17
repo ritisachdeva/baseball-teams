@@ -22,12 +22,27 @@
     
 
     <form id="teamForm">
-        <p>
-            <!-- <label for="favTeam">Enter your favorite baseball team:</label> -->
-            <input type="text" name="favTeam" autofocus placeholder="Enter your favorite baseball team">
-        </p>
+        <div class="input-group">
 
-            <button id="submitButton" type="submit">Submit</button>
+            <input 
+                placeholder="Enter your favorite baseball team" 
+                type="text"
+                id="input"
+                class:"input-group-field" 
+                name="favTeam" 
+                autofocus
+                required
+            >
+
+            <div class="input-group-button">
+                <button class ="button success" type="submit">
+                    Add Team
+                </button>
+            </div>
+
+        </div>
+
+            <!-- <button id="submitButton" type="submit">Submit</button> -->
 
     </form>
 

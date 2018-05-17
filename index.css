@@ -10,6 +10,7 @@ form{
     text-align: center;
     background-color: #eeeeee;
     padding: 1rem;
+    margin:0;
     border: 10px solid #e3e3e3;
 }
 header{
@@ -19,6 +20,10 @@ header{
 main{
     width: 80%;
     margin: 1rem auto;
+}
+
+#input{
+    margin-bottom: 0;
 }
 
 .teams{
@@ -71,4 +76,3 @@ header h1 {
     width:100%;
     
 }
-
