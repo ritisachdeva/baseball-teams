@@ -7,6 +7,7 @@ const renderTeamItem = function(team) {
     item.style.textAlign='center'
 
     const delBut = document.createElement('button')
+    delBut.addEventListener('click', deleteFunc)
     item.appendChild(delBut)
     delBut.textContent = 'Delete'
 
@@ -19,6 +20,15 @@ const renderTeamItem = function(team) {
 
     return list
 }
+
+const deleteFunc = function(ev) {
+    ev.preventDefault()
+    const listItem = ev.target
+    listItem.parentNode.remove()
+    arr.splice(arr.indexOf(listItem), 1)
+
+}
+
 
 // function teamsItem(team){
 //     const div = document.createElement('div')
@@ -46,6 +56,8 @@ const handleSubmit = function(ev){
     // const teamList = document.createElement('ul')
     // teamList.appendChild(teamsItem(favTeam))
     // teamForm.appendChild(teamList)
+
+    
 
     teamsArray.push(favTeam) 
     form.reset()
