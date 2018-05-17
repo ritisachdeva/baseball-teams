@@ -16,6 +16,11 @@ header{
     background-color: #1A06A3;
 }
 
+main{
+    width: 80%;
+    margin: 1rem auto;
+}
+
 .teams{
     text-align: left;
 }
@@ -66,3 +71,4 @@ header h1 {
     width:100%;
     
 }
+

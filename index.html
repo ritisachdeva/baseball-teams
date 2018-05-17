@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Baseball Teams</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
     <link rel="stylesheet" href="index.css" />
     
 </head>
 <body style="background-color: whitesmoke">
-    <center>
 
     <header>
         <h1 id="title" style="color: whitesmoke">Baseball Teams</h1>
     </header>
 
+    <main>
     <p>
         <img src="http://www.lflegal.com/wp-content/uploads/2013/12/mlb_logo.jpg" height="60px" width="90px">
     </p>
@@ -22,8 +23,8 @@
 
     <form id="teamForm">
         <p>
-            <label for="favTeam">Enter your favorite baseball team:</label>
-            <input type="text" name="favTeam" autofocus>
+            <!-- <label for="favTeam">Enter your favorite baseball team:</label> -->
+            <input type="text" name="favTeam" autofocus placeholder="Enter your favorite baseball team">
         </p>
 
             <button id="submitButton" type="submit">Submit</button>
@@ -33,9 +34,9 @@
 
     <p>
     <div id="teams"></div>
-    </p>
+</p>
 
-    </center>
+</main>
 
     <footer class="footer">
             <p>
