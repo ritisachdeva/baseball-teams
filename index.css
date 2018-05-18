@@ -32,9 +32,9 @@ main{
     margin-bottom: 0;
 }
 
-/* .teams{
-    text-align: left;
-} */
+.input-group{
+    margin-bottom: 0;
+}
 
 li{
     list-style: none;
@@ -46,6 +46,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif; 
     font-size: 18px;
     text-align: center;
+    padding-bottom: 85px;
 }
 
 .teamName{
@@ -69,8 +70,7 @@ footer {
     bottom: 0;
     height: 90px;
     /* width: 300px; */
-
-    display: block;
+    /* display: block; */
     margin:0;
     padding: 0;   
 }
