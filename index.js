@@ -1,67 +1,45 @@
-const form= document.querySelector('form#teamForm')
-const teamsArray = []
+const app = {
+    init(selectors){
+        this.teams = []
+        this.max = 0
+        this.list=document.querySelector(selectors.listSelector)
+        this.template = document.querySelector(selectors.templateSelector)
 
-const renderTeamItem = function(team) {
-    const item = document.createElement('li')
-    item.textContent = `Team: ${team}`
-    item.style.textAlign='center'
+        document
+            .querySelector(selectors.formSelector)
+            .addEventListener('submit', (ev) => {
+                ev.preventDefault()
+                this.handleSubmit(ev)
+            })
+    },
 
-    const delBut = document.createElement('button')
-    delBut.addEventListener('click', deleteFunc)
-    item.appendChild(delBut)
-    delBut.textContent = 'Delete'
-    delBut.style.marginLeft = '12px'
+    renderListItem(team){
+        const item = this.template.cloneNode(true)
+        item.classList.remove('template')
+        item.dataset.id = team.id
+        item.querySelector('.teamName').textContent = team.name
+        
+        return item
+    },
 
-    return item
- }
+    handleSubmit(ev){
+        const f = ev.target
+        const team = {
+            id: ++this.max,
+            name: f.teamName.value,
+        }
 
- const renderTeam = function(teamName) {
-    const list = document.createElement('ul')
-    list.appendChild(renderTeamItem(teamName))
+        this.teams.unshift(team)
+        
+        const item = this.renderListItem(team)
+        this.list.insertBefore(item, this.list.firstChild)
 
-    return list
+        f.reset()
+    },
 }
 
-const deleteFunc = function(ev) {
-    ev.preventDefault()
-    const teamItem = ev.target
-    teamItem.parentNode.remove()
-    teamsArray.splice(teamsArray.indexOf(teamItem), 1)
-}
-
-
-// function teamsItem(team){
-//     const div = document.createElement('div')
-    
-
-//     const item = document.createElement('li')
-//     item.textContent = team
-//     //item.style.fontSize='20px'
-//     //item.style.textAlign='center'
-
-
-//     div.appendChild(item)
-
-//     return div
-// }
-
-
-const handleSubmit = function(ev){
-    ev.preventDefault()
-    const f = ev.target
-    const teamForm = document.querySelector('#teamForm')
-    const favTeam = f.favTeam.value
-
-    teamForm.appendChild(renderTeam(favTeam))
-    // const teamList = document.createElement('ul')
-    // teamList.appendChild(teamsItem(favTeam))
-    // teamForm.appendChild(teamList)
-
-    
-
-    teamsArray.push(favTeam) 
-    form.reset()
-    form.favTeam.focus()
-}
-
-form.addEventListener('submit', handleSubmit)
+app.init({
+    formSelector: '#teamForm',
+    listSelector: '#teamList',
+    templateSelector: '.team.template'
+})

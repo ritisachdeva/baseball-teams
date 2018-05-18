@@ -15,11 +15,11 @@
         <h1 id="title" style="color: whitesmoke">Baseball Teams</h1>
     </header>
 
-    <main>
     <p>
         <img src="http://www.lflegal.com/wp-content/uploads/2013/12/mlb_logo.jpg" height="60px" width="90px">
     </p>
     
+<main>
 
     <form id="teamForm">
         <div class="input-group">
@@ -29,7 +29,7 @@
                 type="text"
                 id="input"
                 class:"input-group-field" 
-                name="favTeam" 
+                name="teamName" 
                 autofocus
                 required
             >
@@ -46,10 +46,21 @@
 
     </form>
 
+    <ul id="teamList" class="no-bullet">
+        <li class="template team grid-x align-middle">
+            <span class="teamName cell auto"></span>
+            <span class="actions cell shrink">
+                <button class="button warning">fav</button>
+                <button class="button alert">del</button>
+            </span>
+        </li>
+    </ul>
 
-    <p>
-    <div id="teams"></div>
-</p>
+    
+
+    <!-- <p>
+        <div id="teams"></div>
+    </p> -->
 
 </main>
 
